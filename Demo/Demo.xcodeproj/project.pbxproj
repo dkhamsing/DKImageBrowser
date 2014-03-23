@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19F3505218DEAA200033DAD1 /* ImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F3505118DEAA200033DAD1 /* ImageTests.m */; };
+		19F3505418DEAA8C0033DAD1 /* PathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F3505318DEAA8C0033DAD1 /* PathTests.m */; };
 		CEE43D4A18DB49F900C8F6BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE43D4918DB49F900C8F6BB /* Foundation.framework */; };
 		CEE43D4C18DB49F900C8F6BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE43D4B18DB49F900C8F6BB /* CoreGraphics.framework */; };
 		CEE43D4E18DB49F900C8F6BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE43D4D18DB49F900C8F6BB /* UIKit.framework */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19F3505118DEAA200033DAD1 /* ImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTests.m; sourceTree = "<group>"; };
+		19F3505318DEAA8C0033DAD1 /* PathTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathTests.m; sourceTree = "<group>"; };
 		CEE43D4618DB49F900C8F6BB /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE43D4918DB49F900C8F6BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CEE43D4B18DB49F900C8F6BB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -149,6 +153,8 @@
 		CEE43D6818DB49FA00C8F6BB /* DemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				19F3505118DEAA200033DAD1 /* ImageTests.m */,
+				19F3505318DEAA8C0033DAD1 /* PathTests.m */,
 				CEE43D6E18DB49FA00C8F6BB /* DemoTests.m */,
 				CEE43D6918DB49FA00C8F6BB /* Supporting Files */,
 			);
@@ -298,6 +304,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE43D6F18DB49FA00C8F6BB /* DemoTests.m in Sources */,
+				19F3505418DEAA8C0033DAD1 /* PathTests.m in Sources */,
+				19F3505218DEAA200033DAD1 /* ImageTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
