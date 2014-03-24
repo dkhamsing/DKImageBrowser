@@ -29,7 +29,7 @@ iOS Image Browser with a Thumbnail Strip
 - To present the controller modally, use `DKModalImageBrowser`.
 ``` objc
     DKModalImageBrowser *modalImageBrowser = [[DKModalImageBrowser alloc] init];    
-    // note: use modalImageBrowser.imageBrowser to set data source or customize
+    // note: use modalImageBrowser.imageBrowser to set data source, customize
     modalImageBrowser.imageBrowser.DKImageDataSource = @[ [UIImage imageNamed:@"400-1.jpg"],
                                                           [UIImage imageNamed:@"400-2.jpg"], ];
     [self presentViewController:modalImageBrowser animated:YES completion:nil];
