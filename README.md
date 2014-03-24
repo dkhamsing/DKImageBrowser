@@ -7,7 +7,7 @@ iOS Image Browser with a Thumbnail Strip
 
 # Installation
 - Drag `DKImageBrowser/DKImageBrowser` to your project.
-- `#import "DKImageBrowser.h"` (or `#import #import "DKModalImageBrowser.h"`)
+- `#import "DKImageBrowser.h"` (or `#import "DKModalImageBrowser.h"`)
 
 # Usage
 - Set up the data source array and pass it to an instance of `DKImageBrowser`.
