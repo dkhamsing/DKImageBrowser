@@ -57,6 +57,7 @@ DKImageBrowser includes a sample project in the Demo folder.
 - Add support for rotation
 - Fix `UICollectionViewFlowLayout` errors
 - Improve swiping
+- Improve automatic scrolling of thumbnails
 - Improve layout
 - Add unit tests
 
