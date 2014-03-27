@@ -15,7 +15,7 @@ iOS Image Browser with a Thumbnail Strip
 ```  objc    
     DKImageBrowser *imageBrowser = [[DKImageStripController alloc] init];
     imageBrowser.DKImageDataSource =  @[ @"http://placekitten.com/230/400",
-                                  	      @"http://placekitten.com/240/400"], ];
+                                  	     @"http://placekitten.com/240/400"], ];
     [self.navigationController pushViewController:imagesController animated:YES];
 
 ```
