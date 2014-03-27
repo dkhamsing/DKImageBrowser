@@ -41,7 +41,7 @@ iOS Image Browser with a Thumbnail Strip
 - `DKImagePadding` Padding around the images. The default is 20.
 - `DKImageWidth` Width of the main image being displayed. The default is the width of the screen -100.
 - `DKThumbnailStripHeight` Height of the thumbnail strip. The default is 100.
-- `DKThumbnailStripPosition` Position of the thumbnail strip using `DKThumbnailStripPositions`. The default is `DKThumbnailStripPositionBottom`.
+- `DKThumbnailStripPosition`  Position of the thumbnail strip, either `DKThumbnailStripPositionTop` or `DKThumbnailStripPositionBottom`. The default is `DKThumbnailStripPositionBottom`.
 
 # Demo
 DKImageBrowser includes a sample project in the Demo folder.

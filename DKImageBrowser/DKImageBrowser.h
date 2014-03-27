@@ -52,7 +52,7 @@ NS_ENUM(NSInteger, DKThumbnailStripPositions) {
 
 
 /**
- Position of the thumbnail strip using `DKThumbnailStripPositions`. The default is `DKThumbnailStripPositionBottom`.
+ Position of the thumbnail strip, either `DKThumbnailStripPositionTop` or `DKThumbnailStripPositionBottom`. The default is `DKThumbnailStripPositionBottom`.
  */
 @property (nonatomic) NSInteger DKThumbnailStripPosition;
 
