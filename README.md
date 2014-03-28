@@ -59,7 +59,7 @@ DKImageBrowser includes a sample project in the Demo folder.
 - Improve swiping
 - Improve automatic scrolling of thumbnails
 - Improve layout
-- Add unit tests
+- Improve unit tests
 
 # Say Hi
 - [github.com/dkhamsing](https://github.com/dkhamsing)
