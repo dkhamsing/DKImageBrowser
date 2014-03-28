@@ -3,7 +3,7 @@ DKImageBrowser
 
 iOS Image Browser with a Thumbnail Strip
 
-![](demo.gif)
+![](Assets/demo.gif)
 
 # Installation
 - Drag `DKImageBrowser/DKImageBrowser` to your project.
