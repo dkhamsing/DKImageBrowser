@@ -3,11 +3,11 @@ DKImageBrowser
 
 iOS Image Browser with a Thumbnail Strip
 
-![](screenshot.png)
+![](Assets/demo.gif)
 
 # Installation
 - Drag `DKImageBrowser/DKImageBrowser` to your project.
-- `#import "DKImageBrowser.h"`
+- `#import "DKImageBrowser.h"` (or `#import "DKModalImageBrowser.h"`)
 
 # Usage
 - Set up the data source array and pass it to an instance of `DKImageBrowser`.
@@ -15,7 +15,7 @@ iOS Image Browser with a Thumbnail Strip
 ```  objc    
     DKImageBrowser *imageBrowser = [[DKImageStripController alloc] init];
     imageBrowser.DKImageDataSource =  @[ @"http://placekitten.com/230/400",
-                                  	      @"http://placekitten.com/240/400"], ];
+                                  	     @"http://placekitten.com/240/400"], ];
     [self.navigationController pushViewController:imagesController animated:YES];
 
 ```
@@ -29,7 +29,7 @@ iOS Image Browser with a Thumbnail Strip
 - To present the controller modally, use `DKModalImageBrowser`.
 ``` objc
     DKModalImageBrowser *modalImageBrowser = [[DKModalImageBrowser alloc] init];    
-    // note: use modalImageBrowser.imageBrowser to set data source or customize
+    // note: use modalImageBrowser.imageBrowser to set data source, customize
     modalImageBrowser.imageBrowser.DKImageDataSource = @[ [UIImage imageNamed:@"400-1.jpg"],
                                                           [UIImage imageNamed:@"400-2.jpg"], ];
     [self presentViewController:modalImageBrowser animated:YES completion:nil];
@@ -41,7 +41,7 @@ iOS Image Browser with a Thumbnail Strip
 - `DKImagePadding` Padding around the images. The default is 20.
 - `DKImageWidth` Width of the main image being displayed. The default is the width of the screen -100.
 - `DKThumbnailStripHeight` Height of the thumbnail strip. The default is 100.
-- `DKThumbnailStripPosition` Position of the thumbnail strip using `DKThumbnailStripPositions`. The default is `DKThumbnailStripPositionBottom`.
+- `DKThumbnailStripPosition`  Position of the thumbnail strip, either `DKThumbnailStripPositionTop` or `DKThumbnailStripPositionBottom`. The default is `DKThumbnailStripPositionBottom`.
 
 # Demo
 DKImageBrowser includes a sample project in the Demo folder.
@@ -57,6 +57,7 @@ DKImageBrowser includes a sample project in the Demo folder.
 - Add support for rotation
 - Fix `UICollectionViewFlowLayout` errors
 - Improve swiping
+- Improve automatic scrolling of thumbnails
 - Improve layout
 - Add unit tests
 
