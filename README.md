@@ -1,7 +1,7 @@
 DKImageBrowser
 ==============
 
-iOS Image Browser with a Thumbnail Strip
+iOS controller to display images (URL or `UIImage`) alongside a strip of thumbnails.
 
 ![](Assets/demo.gif)
 
