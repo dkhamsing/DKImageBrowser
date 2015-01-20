@@ -52,16 +52,9 @@ DKImageBrowser includes a sample project in the Demo folder.
 - This project was tested with iOS 7.0 and 7.1.
 
 # TODO
-- Add loading indicator (downloading images)
-- Add single / multiple selection
-- Add support for rotation
-- Fix `UICollectionViewFlowLayout` errors
-- Improve swiping
-- Improve automatic scrolling of thumbnails
-- Improve layout
-- Improve unit tests
+- See the [Wiki](https://github.com/dkhamsing/DKImageBrowser/wiki)
 
-# Say Hi
+# Contact
 - [github.com/dkhamsing](https://github.com/dkhamsing)
 - [twitter.com/dkhamsing](https://twitter.com/dkhamsing)
 - [contact](http://dkhamsing.tumblr.com/ask)
