@@ -64,7 +64,7 @@ DKImageBrowser includes a sample project in the Demo folder.
 # Contact
 - [github.com/dkhamsing](https://github.com/dkhamsing)
 - [twitter.com/dkhamsing](https://twitter.com/dkhamsing)
-- [contact](http://dkhamsing.tumblr.com/ask)
+- [Send a message](http://dkhamsing.tumblr.com/ask)
 
 # License
 DKImageBrowser is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
