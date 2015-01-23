@@ -6,8 +6,15 @@ iOS controller to display images (URL or `UIImage`) alongside a strip of thumbna
 ![](Assets/demo.gif)
 
 # Installation
+## Manual
 - Drag `DKImageBrowser/DKImageBrowser` to your project.
 - `#import "DKImageBrowser.h"` (or `#import "DKModalImageBrowser.h"`)
+
+## Cocoapods
+```
+platform :ios, '7.0'
+pod 'DKImageBrowser'
+```
 
 # Usage
 - Set up the data source array and pass it to an instance of `DKImageBrowser`.
