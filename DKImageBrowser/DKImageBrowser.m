@@ -113,7 +113,7 @@ NSString *const DKBottomCellIdentifer = @"DKBottomCellIdentifer";
             break;
             
         default:
-            NSLog(@"TODO: strip position for %d", _DKThumbnailStripPosition);
+            NSLog(@"TODO: strip position for %@", @(_DKThumbnailStripPosition));
             break;
     }
     
