@@ -11,7 +11,7 @@ iOS controller to display images (URL or `UIImage`) alongside a strip of thumbna
 - `#import "DKImageBrowser.h"` (or `#import "DKModalImageBrowser.h"`)
 
 ## Cocoapods
-```
+``` ruby
 platform :ios, '7.0'
 pod 'DKImageBrowser'
 ```
