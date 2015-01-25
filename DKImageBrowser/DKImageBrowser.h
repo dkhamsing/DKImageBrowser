@@ -17,6 +17,7 @@ NS_ENUM(NSInteger, DKThumbnailStripPositions) {
 };
 
 
+/** iOS Image Browser with a Thumbnail Strip. */
 @interface DKImageBrowser : UIViewController
 
 /**
