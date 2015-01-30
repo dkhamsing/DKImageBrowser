@@ -1,7 +1,12 @@
 DKImageBrowser
 ==============
 
-iOS controller to display images (URL or `UIImage`) alongside a strip of thumbnails.
+iOS controller to display images (URL or `UIImage`) alongside a strip of thumbnails
+
+[![Build Status](https://travis-ci.org/dkhamsing/DKImageBrowser.svg?branch=master)](https://travis-ci.org/dkhamsing/DKImageBrowser)
+[![Version](https://img.shields.io/cocoapods/v/DKImageBrowser.svg?style=flat)](http://cocoadocs.org/docsets/DKImageBrowser)
+[![License](https://img.shields.io/cocoapods/l/DKImageBrowser.svg?style=flat)](http://cocoadocs.org/docsets/DKImageBrowser)
+[![Platform](https://img.shields.io/cocoapods/p/DKImageBrowser.svg?style=flat)](http://cocoadocs.org/docsets/DKImageBrowser)
 
 ![](Assets/demo.gif)
 
