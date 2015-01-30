@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 
 
+/** Enum for strip position. */
 //TODO: left, right
 NS_ENUM(NSInteger, DKThumbnailStripPositions) {
     DKThumbnailStripPositionTop,
