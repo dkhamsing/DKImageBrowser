@@ -59,4 +59,10 @@ NS_ENUM(NSInteger, DKThumbnailStripPositions) {
 @property (nonatomic) NSInteger DKThumbnailStripPosition;
 
 
+/**  
+ Starting image index. The default is 0 (first image).
+ */
+@property (nonatomic) NSInteger DKStartIndex;
+
+
 @end

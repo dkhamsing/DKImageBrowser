@@ -52,6 +52,7 @@ pod 'DKImageBrowser'
 - `DKBackgroundColor` Background color of the image browser. The default is white.
 - `DKImagePadding` Padding around the images. The default is 20.
 - `DKImageWidth` Width of the main image being displayed. The default is the width of the screen -100.
+- `DKStartIndex` Starting image index. The default is 0 (first image).
 - `DKThumbnailStripHeight` Height of the thumbnail strip. The default is 100.
 - `DKThumbnailStripPosition`  Position of the thumbnail strip, either `DKThumbnailStripPositionTop` or `DKThumbnailStripPositionBottom`. The default is `DKThumbnailStripPositionBottom`.
 

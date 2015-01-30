@@ -69,6 +69,7 @@
     modalImageBrowser.imageBrowser.DKThumbnailStripHeight = 110;
     modalImageBrowser.imageBrowser.DKBackgroundColor = [UIColor blackColor];
     modalImageBrowser.imageBrowser.DKThumbnailStripPosition = DKThumbnailStripPositionTop;
+    modalImageBrowser.imageBrowser.DKStartIndex = 2;
     
     [self presentViewController:modalImageBrowser animated:YES completion:nil];    
 }

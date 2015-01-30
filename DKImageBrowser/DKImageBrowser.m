@@ -121,6 +121,12 @@ NSString *const DKBottomCellIdentifer = @"DKBottomCellIdentifer";
     // load collection views
     [_DKImageCollectionView reloadData];
     [_DKThumbnailCollectionView reloadData];
+    
+    if (_DKStartIndex>0) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:_DKStartIndex inSection:0];
+        [_DKThumbnailCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+        [_DKImageCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+    }
 }
 
 
