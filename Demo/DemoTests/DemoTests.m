@@ -49,10 +49,11 @@
 
 
 - (void)testProperties {
-    XCTAssertTrue([DKImageBrowser instancesRespondToSelector:@selector(DKImageDataSource)], @"");
     XCTAssertTrue([DKImageBrowser instancesRespondToSelector:@selector(DKBackgroundColor)], @"");
+    XCTAssertTrue([DKImageBrowser instancesRespondToSelector:@selector(DKImageDataSource)], @"");
     XCTAssertTrue([DKImageBrowser instancesRespondToSelector:@selector(DKImagePadding)], @"");
     XCTAssertTrue([DKImageBrowser instancesRespondToSelector:@selector(DKImageWidth)], @"");
+    XCTAssertTrue([DKImageBrowser instancesRespondToSelector:@selector(DKStartIndex)], @"");
     XCTAssertTrue([DKImageBrowser instancesRespondToSelector:@selector(DKThumbnailStripHeight)], @"");
     XCTAssertTrue([DKImageBrowser instancesRespondToSelector:@selector(DKThumbnailStripPosition)], @"");
 }
