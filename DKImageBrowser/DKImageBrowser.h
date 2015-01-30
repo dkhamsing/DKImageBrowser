@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 
 
+/** Enum for strip position. */
 //TODO: left, right
 NS_ENUM(NSInteger, DKThumbnailStripPositions) {
     DKThumbnailStripPositionTop,
@@ -17,6 +18,7 @@ NS_ENUM(NSInteger, DKThumbnailStripPositions) {
 };
 
 
+/** iOS Image Browser with a Thumbnail Strip. */
 @interface DKImageBrowser : UIViewController
 
 /**
@@ -55,6 +57,12 @@ NS_ENUM(NSInteger, DKThumbnailStripPositions) {
  Position of the thumbnail strip, either `DKThumbnailStripPositionTop` or `DKThumbnailStripPositionBottom`. The default is `DKThumbnailStripPositionBottom`.
  */
 @property (nonatomic) NSInteger DKThumbnailStripPosition;
+
+
+/**  
+ Starting image index. The default is 0 (first image).
+ */
+@property (nonatomic) NSInteger DKStartIndex;
 
 
 @end

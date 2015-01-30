@@ -1,13 +1,25 @@
 DKImageBrowser
 ==============
 
-iOS Image Browser with a Thumbnail Strip
+iOS controller to display images (URL or `UIImage`) alongside a strip of thumbnails
+
+[![Build Status](https://travis-ci.org/dkhamsing/DKImageBrowser.svg?branch=master)](https://travis-ci.org/dkhamsing/DKImageBrowser)
+[![Version](https://img.shields.io/cocoapods/v/DKImageBrowser.svg?style=flat)](http://cocoadocs.org/docsets/DKImageBrowser)
+[![License](https://img.shields.io/cocoapods/l/DKImageBrowser.svg?style=flat)](http://cocoadocs.org/docsets/DKImageBrowser)
+[![Platform](https://img.shields.io/cocoapods/p/DKImageBrowser.svg?style=flat)](http://cocoadocs.org/docsets/DKImageBrowser)
 
 ![](Assets/demo.gif)
 
 # Installation
+## Manual
 - Drag `DKImageBrowser/DKImageBrowser` to your project.
 - `#import "DKImageBrowser.h"` (or `#import "DKModalImageBrowser.h"`)
+
+## Cocoapods
+``` ruby
+platform :ios, '7.0'
+pod 'DKImageBrowser'
+```
 
 # Usage
 - Set up the data source array and pass it to an instance of `DKImageBrowser`.
@@ -40,6 +52,7 @@ iOS Image Browser with a Thumbnail Strip
 - `DKBackgroundColor` Background color of the image browser. The default is white.
 - `DKImagePadding` Padding around the images. The default is 20.
 - `DKImageWidth` Width of the main image being displayed. The default is the width of the screen -100.
+- `DKStartIndex` Starting image index. The default is 0 (first image).
 - `DKThumbnailStripHeight` Height of the thumbnail strip. The default is 100.
 - `DKThumbnailStripPosition`  Position of the thumbnail strip, either `DKThumbnailStripPositionTop` or `DKThumbnailStripPositionBottom`. The default is `DKThumbnailStripPositionBottom`.
 
@@ -52,19 +65,12 @@ DKImageBrowser includes a sample project in the Demo folder.
 - This project was tested with iOS 7.0 and 7.1.
 
 # TODO
-- Add loading indicator (downloading images)
-- Add single / multiple selection
-- Add support for rotation
-- Fix `UICollectionViewFlowLayout` errors
-- Improve swiping
-- Improve automatic scrolling of thumbnails
-- Improve layout
-- Improve unit tests
+- See the [Wiki](https://github.com/dkhamsing/DKImageBrowser/wiki)
 
-# Say Hi
+# Contact
 - [github.com/dkhamsing](https://github.com/dkhamsing)
 - [twitter.com/dkhamsing](https://twitter.com/dkhamsing)
-- [contact](http://dkhamsing.tumblr.com/ask)
+- [Send a message](http://dkhamsing.tumblr.com/ask)
 
 # License
 DKImageBrowser is available under the MIT license. See the [LICENSE](LICENSE) file for more info.

@@ -7,10 +7,13 @@
 
 #import <UIKit/UIKit.h>
 
-
+/** Image cell. */
 @interface DKImageCell : UICollectionViewCell
 
-@property (nonatomic,strong) UIImageView *DKImageView;
+/**
+ Image view.
+ */
+@property (nonatomic, strong) UIImageView *DKImageView;
 
 
 @end
