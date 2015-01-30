@@ -1,7 +1,7 @@
 Pod::Spec.new do |s| 
   s.name         = 'DKImageBrowser'
 
-  s.version      = '0.1.2'
+  s.version      = '0.1.3'
 
   s.summary      = 'Scrolling Tab iOS Control.'
 
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
    
   s.platform     = :ios, '7.0'
  
-  s.source       = { :git => 'https://github.com/dkhamsing/DKImageBrowser.git', :tag => 'v0.1.2' }
+  s.source       = { :git => 'https://github.com/dkhamsing/DKImageBrowser.git', :tag => 'v0.1.3' }
 
   s.source_files  = 'DKImageBrowser/*'
   
