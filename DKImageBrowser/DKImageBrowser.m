@@ -130,35 +130,6 @@ NSString *const DKBottomCellIdentifer = @"DKBottomCellIdentifer";
 }
 
 
-#pragma mark - Helpers
-
-- (void)displayImageWithPath:(NSString*)imagePath imageView:(UIImageView*)imageView {
-    [self getImageWithPath:imagePath ResultBlock:^(UIImage *image) {
-        imageView.image = image;
-    }];
-}
-
-
-typedef void (^ImageBlock)(UIImage *image);
-
-- (void)getImageWithPath:(NSString*)imagePath ResultBlock:(ImageBlock)resultBlock {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSURL *url = [NSURL URLWithString:imagePath];
-        UIImage *productImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:url options:NSDataReadingMappedIfSafe error:nil]];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (productImage.size.width>0) {
-                if (resultBlock) {
-                    resultBlock(productImage);
-                }
-            }
-            else {
-                NSLog(@"DKImageBrowser: error getting %@",imagePath);
-            }
-        });
-    });
-}
-
-
 #pragma mark - UICollectionView Datasource
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {    
@@ -190,8 +161,13 @@ typedef void (^ImageBlock)(UIImage *image);
         cell.DKImageView.image = image;
     }
     else if ([obj isKindOfClass:[NSString class]]) {
-        NSString *imagePath = _DKImageDataSource[indexPath.row];
-        [self displayImageWithPath:imagePath imageView:cell.DKImageView];
+        NSString *imagePath = _DKImageDataSource[indexPath.row];        
+        NSURL *url = [NSURL URLWithString:imagePath];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+            UIImage *image = [UIImage imageWithData:data];
+            cell.DKImageView.image = image; 
+        }];
     }
     else {
         NSLog(@"Error: the data source must be (String) URLs to images or images");
