@@ -62,10 +62,7 @@ DKImageBrowser includes a sample project in the Demo folder.
 # Compatibility
 - This project uses ARC.
 - This project supports iPhone and iPad.
-- This project was tested with iOS 7.0 and 7.1.
-
-# TODO
-- See the [Wiki](https://github.com/dkhamsing/DKImageBrowser/wiki)
+- This project was tested with iOS 7.
 
 # Contact
 - [github.com/dkhamsing](https://github.com/dkhamsing)
