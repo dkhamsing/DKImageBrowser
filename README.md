@@ -57,12 +57,12 @@ pod 'DKImageBrowser'
 - `DKThumbnailStripPosition`  Position of the thumbnail strip, either `DKThumbnailStripPositionTop` or `DKThumbnailStripPositionBottom`. The default is `DKThumbnailStripPositionBottom`.
 
 # Demo
-DKImageBrowser includes a sample project in the Demo folder.
+DKImageBrowser includes Swift and Objective-C demo projects.
 
 # Compatibility
 - This project uses ARC.
 - This project supports iPhone and iPad.
-- This project was tested with iOS 7.
+- This project was tested with iOS 8.
 
 # Contact
 - [github.com/dkhamsing](https://github.com/dkhamsing)
