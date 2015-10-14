@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         let imageBrowser = DKImageBrowser()
         imageBrowser.title = "UIImage Data Source"
         
-        var imageDataSource: [UIImage] = [
+        let imageDataSource: [UIImage] = [
             UIImage(named: "400-1.jpg")!,
             UIImage(named: "400-2.jpg")!,
         ]

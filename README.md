@@ -4,7 +4,7 @@ DKImageBrowser
 iOS controller to display images (URL or `UIImage`) alongside a strip of thumbnails
 
 [![Build Status](https://travis-ci.org/dkhamsing/DKImageBrowser.svg?branch=master)](https://travis-ci.org/dkhamsing/DKImageBrowser)
-[![Version](https://img.shields.io/cocoapods/v/DKImageBrowser.svg?style=flat)](http://cocoadocs.org/docsets/DKImageBrowser)
+[![Version](https://img.shields.io/cocoapods/v/DKImageBrowser.svg?style=flat)](https://cocoapods.org/pods/DKImageBrowser)
 [![License](https://img.shields.io/cocoapods/l/DKImageBrowser.svg?style=flat)](http://cocoadocs.org/docsets/DKImageBrowser)
 [![Platform](https://img.shields.io/cocoapods/p/DKImageBrowser.svg?style=flat)](http://cocoadocs.org/docsets/DKImageBrowser)
 
@@ -17,12 +17,12 @@ iOS controller to display images (URL or `UIImage`) alongside a strip of thumbna
 
 ## [CocoaPods](https://cocoapods.org/)
 ``` ruby
-platform :ios, '7.0'
+platform :ios, '9.0'
 pod 'DKImageBrowser'
 ```
 
 # Usage
-- Set up the data source array and pass it to an instance of `DKImageBrowser`.
+Set up the data source array and pass it to an instance of `DKImageBrowser`.
 
 ```  objc    
     DKImageBrowser *imageBrowser = [[DKImageStripController alloc] init];
@@ -32,19 +32,62 @@ pod 'DKImageBrowser'
 
 ```
 
-- The data source `DKImageDataSource` can also be a list of `UIImage` objects.
+The data source `DKImageDataSource` can also be a list of `UIImage` objects.
+
 ``` objc
     imageBrowser.DKImageDataSource = @[ [UIImage imageNamed:@"400-1.jpg"],
                                         [UIImage imageNamed:@"400-2.jpg"], ];
 ```
                                   
-- To present the controller modally, use `DKModalImageBrowser`.
+To present the controller modally, use `DKModalImageBrowser`.
+
 ``` objc
     DKModalImageBrowser *modalImageBrowser = [[DKModalImageBrowser alloc] init];    
     // note: use modalImageBrowser.imageBrowser to set data source, customize
     modalImageBrowser.imageBrowser.DKImageDataSource = @[ [UIImage imageNamed:@"400-1.jpg"],
                                                           [UIImage imageNamed:@"400-2.jpg"], ];
     [self presentViewController:modalImageBrowser animated:YES completion:nil];
+
+```
+
+## Swift
+
+``` swift
+ 	func actionDefault() {
+        let imageBrowser = DKImageBrowser()
+        imageBrowser.title = "UIImage Data Source"
+        
+        let imageDataSource: [UIImage] = [
+            UIImage(named: "400-1.jpg")!,
+            UIImage(named: "400-2.jpg")!,
+        ]
+        imageBrowser.DKImageDataSource = imageDataSource
+        
+        self.navigationController?.pushViewController(imageBrowser, animated: true)
+    }
+    
+    func actionCustom() {
+        var kittenDataSource: [NSString] = []
+        let imageHeight = 416
+        let imageWidth = Int(self.view.bounds.size.width - 20)
+        
+        for index in 1...10 {
+            let placeKitten = "http://placekitten.com/\(imageWidth + (index * 2  + 10))/\(imageHeight)" as NSString
+            kittenDataSource.append(placeKitten)
+        }
+        
+        let modalImageBrowser = DKModalImageBrowser()
+        modalImageBrowser.title = "URL Data Source"
+        
+        modalImageBrowser.imageBrowser.DKImageDataSource = kittenDataSource
+        modalImageBrowser.imageBrowser.DKImagePadding = 5
+        modalImageBrowser.imageBrowser.DKThumbnailStripHeight = 110
+        modalImageBrowser.imageBrowser.DKBackgroundColor = UIColor.blackColor()
+        modalImageBrowser.imageBrowser.DKThumbnailStripPosition = 0
+        modalImageBrowser.imageBrowser.DKStartIndex = 2
+        
+        self.presentViewController(modalImageBrowser, animated: true, completion: nil)
+    }
 
 ```
 
@@ -60,14 +103,11 @@ pod 'DKImageBrowser'
 DKImageBrowser includes Swift and Objective-C demo projects.
 
 # Compatibility
-- This project uses ARC.
-- This project supports iPhone and iPad.
-- This project was tested with iOS 8.
+This project was tested with iOS 9.
 
 # Contact
 - [github.com/dkhamsing](https://github.com/dkhamsing)
 - [twitter.com/dkhamsing](https://twitter.com/dkhamsing)
-- [Send a message](http://dkhamsing.tumblr.com/ask)
 
 # License
 DKImageBrowser is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
