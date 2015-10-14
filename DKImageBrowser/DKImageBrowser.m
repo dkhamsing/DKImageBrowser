@@ -132,7 +132,7 @@ NSString *const DKBottomCellIdentifer = @"DKBottomCellIdentifer";
 
 #pragma mark - UICollectionView Datasource
 
-- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {    
+- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
     return _DKImageDataSource.count;
 }
 
@@ -147,7 +147,7 @@ NSString *const DKBottomCellIdentifer = @"DKBottomCellIdentifer";
 }
 
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)cview cellForItemAtIndexPath:(NSIndexPath *)indexPath {    
+- (UICollectionViewCell *)collectionView:(UICollectionView *)cview cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if ((cview==_DKImageCollectionView) &&
         (indexPath.item>1)) {
         [_DKThumbnailCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:indexPath.item-1 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
@@ -161,13 +161,19 @@ NSString *const DKBottomCellIdentifer = @"DKBottomCellIdentifer";
         cell.DKImageView.image = image;
     }
     else if ([obj isKindOfClass:[NSString class]]) {
-        NSString *imagePath = _DKImageDataSource[indexPath.row];        
+        NSString *imagePath = _DKImageDataSource[indexPath.row];
         NSURL *url = [NSURL URLWithString:imagePath];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+        [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             UIImage *image = [UIImage imageWithData:data];
-            cell.DKImageView.image = image; 
-        }];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                cell.DKImageView.image = image;
+            });
+            
+        }] resume];
     }
     else {
         NSLog(@"Error: the data source must be (String) URLs to images or images");
