@@ -4,7 +4,7 @@ DKImageBrowser
 iOS controller to display images (URL or `UIImage`) alongside a strip of thumbnails
 
 [![Build Status](https://travis-ci.org/dkhamsing/DKImageBrowser.svg?branch=master)](https://travis-ci.org/dkhamsing/DKImageBrowser)
-[![Version](https://img.shields.io/cocoapods/v/DKImageBrowser.svg?style=flat)](http://cocoadocs.org/docsets/DKImageBrowser)
+[![Version](https://img.shields.io/cocoapods/v/DKImageBrowser.svg?style=flat)](https://cocoapods.org/pods/DKImageBrowser)
 [![License](https://img.shields.io/cocoapods/l/DKImageBrowser.svg?style=flat)](http://cocoadocs.org/docsets/DKImageBrowser)
 [![Platform](https://img.shields.io/cocoapods/p/DKImageBrowser.svg?style=flat)](http://cocoadocs.org/docsets/DKImageBrowser)
 
@@ -17,7 +17,7 @@ iOS controller to display images (URL or `UIImage`) alongside a strip of thumbna
 
 ## [CocoaPods](https://cocoapods.org/)
 ``` ruby
-platform :ios, '7.0'
+platform :ios, '9.0'
 pod 'DKImageBrowser'
 ```
 
@@ -60,14 +60,11 @@ pod 'DKImageBrowser'
 DKImageBrowser includes Swift and Objective-C demo projects.
 
 # Compatibility
-- This project uses ARC.
-- This project supports iPhone and iPad.
-- This project was tested with iOS 8.
+This project was tested with iOS 9.
 
 # Contact
 - [github.com/dkhamsing](https://github.com/dkhamsing)
 - [twitter.com/dkhamsing](https://twitter.com/dkhamsing)
-- [Send a message](http://dkhamsing.tumblr.com/ask)
 
 # License
 DKImageBrowser is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
