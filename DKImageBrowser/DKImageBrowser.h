@@ -10,7 +10,7 @@
 
 /** Enum for strip position. */
 //TODO: left, right
-NS_ENUM(NSInteger, DKThumbnailStripPositions) {
+static NS_ENUM(NSInteger, DKThumbnailStripPositions) {
     DKThumbnailStripPositionTop,
     DKThumbnailStripPositionBottom,
     // DKThumbnailStripPositionLeft,
